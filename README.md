@@ -32,8 +32,8 @@ source scripts/env.sh
 # 默认为可见 GPU 0。其他设备可在 source 前设置 CUDA_VISIBLE_DEVICES。
 # export CUDA_VISIBLE_DEVICES=1
 
-# 只下载 8 条训练轨迹、2 条验证轨迹；保持官方按采集会话划分的 split。
-.venv/bin/python download_assets.py dataset --train-episodes 8 --validation-episodes 2
+# 下载插销入孔任务的完整 500 条轨迹（412 条训练、88 条验证）。
+.venv/bin/python download_assets.py dataset --all-task
 
 # 完整基础模型仍须下载；29 个对象，12,441,749,581 字节。
 .venv/bin/python download_assets.py base
@@ -54,13 +54,46 @@ bash scripts/run_smoke.sh h100_smoke_001
 - 固定版本：[7ad38776d91e4e13c02dad4e6ad892e8b8a1d187](https://huggingface.co/datasets/Cyan666/HandsOn-Datasets/tree/7ad38776d91e4e13c02dad4e6ad892e8b8a1d187)
 - 本任务共有 **500 条轨迹**：412 条训练、88 条验证，共 204,487 帧；任务数据/视频文件约 2.72 GB。
 
-默认只选择 8+2 条，用于迁移检查。可以先查看计划；需要完整任务数据时再明确选择 `--all-task`：
+### 下载完整任务，以及文件保存位置
+
+此处需要下载的是 **t09_insert_peg 的全部 500 条轨迹**。上游没有单独的任务压缩包，下载器从上面的统一数据仓库中按 `source_task=b03_peg_in_socket` 选择全部对应文件，包含 500 个 Parquet 和 1,500 个三路视频文件，约 **2.72 GB**。
+
+在 H100 上明确指定保存目录，例如 **`/data/handson/t09_insert_peg`**：
 
 ```bash
-.venv/bin/python download_assets.py dataset --plan-only
-# 明确请求完整插销任务时使用，不会下载其余任务：
+cd handson
+export HANDSON_DATASET_DIR=/data/handson/t09_insert_peg
+source scripts/env.sh
+
+# 先查看完整任务的选择和实际落盘路径，不下载数据文件：
+.venv/bin/python download_assets.py dataset --all-task --plan-only
+
+# 下载该任务的完整数据：
 .venv/bin/python download_assets.py dataset --all-task
 ```
+
+下载后，数据实际位于：
+
+```text
+/data/handson/t09_insert_peg/
+├── data/chunk-*/episode_*.parquet
+├── videos/chunk-*/observation.images.front/episode_*.mp4
+├── videos/chunk-*/observation.images.wrist_left/episode_*.mp4
+├── videos/chunk-*/observation.images.wrist_right/episode_*.mp4
+├── meta/
+├── language/
+├── source_manifest.jsonl
+├── FILE_MANIFEST.jsonl
+└── subset_receipt.json
+```
+
+`subset_receipt.json` 中应显示 `episodes=500`、`split_episodes.train=412`、`split_episodes.validation=88`、`sha256_verified_files=2000`，并且 `complete_for_selected_episodes=true`。
+
+**训练时在同一 shell 保留 `HANDSON_DATASET_DIR`，训练代码会直接读取此完整任务目录。** 新开终端时重新执行上述 `export` 和 `source`；无需改 Python 代码。
+
+如果不设置 `HANDSON_DATASET_DIR`，默认落盘位置是 **`<克隆仓库的绝对路径>/workdir/dataset/`**；若设置了 `HANDSON_WORK_DIR`，则是 `$HANDSON_WORK_DIR/dataset/`。完整元数据缓存单独位于 `$HANDSON_WORK_DIR/metadata/`。指定的数据目录需要当前用户有写入权限。
+
+`--all-task` 是完整任务选择的关键参数。不传该参数时，下载器仍沿用最初迁移检查用的 8+2 条小样本默认值；它不代表本任务完整数据。后面的 A100 5 步实测记录也是历史小样本结果。
 
 原始视频为 front 854×480、两路 wrist 848×480。归一化仅使用选中的训练轨迹；验证集不参与训练或归一化。训练时排除不足 30 帧的末尾动作窗口，避免填充动作进入无掩码损失。发布包自带的 reader 和 prompt sampler 按原字节保留。
 
