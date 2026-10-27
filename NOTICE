@@ -1,0 +1,15 @@
+HandsOn pi05 portable fine-tuning wrapper
+
+This package includes byte-preserved excerpts from TsinghuaC3I/HandsOn at
+be2b59aad016869e8cede1f485d64e3c2d191685 and the released dataset reader at
+7ad38776d91e4e13c02dad4e6ad892e8b8a1d187.
+
+OpenPI and LeRobot retain their Apache-2.0 license texts, notices and file headers.
+HandsOn and the dataset reader retain their respective MIT notices.
+See third_party/, UPSTREAM.json and the upstream repositories for provenance.
+Gemma checkpoints have separate model terms. Model weights and demonstrations
+are not redistributed in this Git repository.
+
+The local wrapper adds pinned subset download, EEF52 action-head expansion,
+portable paths, task configuration and train/checkpoint audits. Vendored
+training code is unchanged. H100 execution has not been validated here.

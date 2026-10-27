@@ -1,0 +1,30 @@
+{
+  "validated_on": "A100 server / Linux x86_64 / Python 3.12.15",
+  "h100_tested": false,
+  "checks": {
+    "upstream_sha256_files": 182,
+    "portable_imports": true,
+    "official_preprocessing_real_images": true,
+    "images_each": [
+      224,
+      224,
+      3
+    ],
+    "state_dim": 52,
+    "action_chunk": [
+      30,
+      52
+    ],
+    "prompt_tokens": 250,
+    "training_windows": 2964,
+    "dataset_cache_sha256_files": 40,
+    "base_cache_crc32c_objects": 29,
+    "base_bytes": 12441749581,
+    "pinned_generation_https_range_bytes": 64,
+    "python_entrypoint_help": true,
+    "python_compile": true,
+    "shell_syntax": true
+  },
+  "training_validation": "See examples/a100_smoke/smoke_result.json for the original 5-step result; no new training run was launched for packaging.",
+  "known_issue": "A100 JAX 0.5.3 process can segfault during cleanup after finalized checkpoint; H100 outcome is unverified."
+}

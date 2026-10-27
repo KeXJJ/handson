@@ -1,0 +1,203 @@
+{
+  "source": "gs://openpi-assets/checkpoints/pi05_base",
+  "bytes": 12441749581,
+  "objects": [
+    {
+      "name": "checkpoints/pi05_base/assets/arx/norm_stats.json",
+      "size": "3476",
+      "generation": "1757354310096104",
+      "crc32c": "6nyXHA==",
+      "md5Hash": "Qy/oPSHJD94BHxRaLllgsg=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/arx_mobile/norm_stats.json",
+      "size": "3677",
+      "generation": "1757354310086315",
+      "crc32c": "3XZHoA==",
+      "md5Hash": "Cs4bLtdB+15zZI0ObagbEQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/droid/norm_stats.json",
+      "size": "2062",
+      "generation": "1757354310090122",
+      "crc32c": "sr4eWw==",
+      "md5Hash": "HQC4cGUtEo+86jMc1vBR7w=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/fibocom_mobile/norm_stats.json",
+      "size": "3951",
+      "generation": "1757354310088094",
+      "crc32c": "Fh5IlA==",
+      "md5Hash": "w0SZXV8c/ogHVtS7Ckh++Q=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/franka/norm_stats.json",
+      "size": "2081",
+      "generation": "1757354310090331",
+      "crc32c": "LDm8qg==",
+      "md5Hash": "LC6+FS5cfmXjBJKG9hderA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/trossen/norm_stats.json",
+      "size": "3394",
+      "generation": "1757354310095901",
+      "crc32c": "ej6a+A==",
+      "md5Hash": "OfbauPUY0C6yjwF1jFjdsg=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/trossen_mobile/norm_stats.json",
+      "size": "3699",
+      "generation": "1757354310090749",
+      "crc32c": "l2F3EA==",
+      "md5Hash": "PEW+oUP3c2vo1fwB0Qtp+A=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/ur5e/norm_stats.json",
+      "size": "1851",
+      "generation": "1757354310089361",
+      "crc32c": "o9bKwg==",
+      "md5Hash": "ljxT2aK0MQVTC87Sw+ZeQw=="
+    },
+    {
+      "name": "checkpoints/pi05_base/assets/ur5e_dual/norm_stats.json",
+      "size": "3459",
+      "generation": "1757354310089903",
+      "crc32c": "X5QwQA==",
+      "md5Hash": "YxVr2ClglFN0p/7g43ycPw=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/_CHECKPOINT_METADATA",
+      "size": "258",
+      "generation": "1757354310086279",
+      "crc32c": "3q5lUQ==",
+      "md5Hash": "uDrD0GJ9/soyYRTjoi8CTw=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/_METADATA",
+      "size": "21402",
+      "generation": "1757354310086139",
+      "crc32c": "frXw2w==",
+      "md5Hash": "2KbT3SeW+TztM+bI4gRvTQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/_sharding",
+      "size": "11420",
+      "generation": "1757354310089508",
+      "crc32c": "4PKBJg==",
+      "md5Hash": "fWlnNNk1SS+IQh+CEMIX6g=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/array_metadatas/process_0",
+      "size": "8856",
+      "generation": "1757354310090622",
+      "crc32c": "CS/yRg==",
+      "md5Hash": "/YmvRR2S0+o29qZiGEPt0w=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/commit_success.txt",
+      "size": "0",
+      "generation": "1757354310089792",
+      "crc32c": "AAAAAA==",
+      "md5Hash": "1B2M2Y8AsgTpgAmY7PhCfg=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/d/1c4302d2d2000b5f3eb4fa1350fdef9a",
+      "size": "2132",
+      "generation": "1757354310119002",
+      "crc32c": "SGdLxw==",
+      "md5Hash": "M9VQtg9mmNpNxUk3PFqKaA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/manifest.ocdbt",
+      "size": "117",
+      "generation": "1757354310086335",
+      "crc32c": "SGdLxw==",
+      "md5Hash": "JHMt8vA2+4zTj7e08rGstQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/0832cad6c37f82d4eedd897dcbb8da9d",
+      "size": "2240590484",
+      "generation": "1757354310220587",
+      "crc32c": "4YAIHA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/247d4b7c814d8b1a23fa8a20f36a88f7",
+      "size": "34945019",
+      "generation": "1757354310092980",
+      "crc32c": "ceM1dg==",
+      "md5Hash": "OXwd3VCCtNmDWnq+Av+/8w=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/35a545f74995e511808d4f94dfbef3b6",
+      "size": "70041571",
+      "generation": "1757354310090576",
+      "crc32c": "Iq8YUA==",
+      "md5Hash": "H9E9107OxwddcrM7+5WzAw=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/73bbae8a4deba6498bf07d96b215a574",
+      "size": "2935855",
+      "generation": "1757354310087457",
+      "crc32c": "2IEHcA==",
+      "md5Hash": "HVlWzNlQc0i4zG5dA3jWrA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/7bc9d3296d23a6fb83a6b3778ac6e964",
+      "size": "2240315383",
+      "generation": "1757354310232242",
+      "crc32c": "R6AiOQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/7d78f38c5d8be1eea31406644dde9bd6",
+      "size": "133821",
+      "generation": "1757354310097613",
+      "crc32c": "3ljcDg==",
+      "md5Hash": "qA3aTOnuJOm8TSyveL+ScA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/828bee85475e37c61e1cc19e32d1c5ef",
+      "size": "929",
+      "generation": "1757354310090811",
+      "crc32c": "SGdLxw==",
+      "md5Hash": "l5njiIkDe+WMHZv9hjz9yQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/8c5d7070ea57bdce2f0a19f95b8a21b4",
+      "size": "3077149148",
+      "generation": "1757354310234847",
+      "crc32c": "gQSvJQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/b4349aaadb7dfa45c3a53fc67c04b8f6",
+      "size": "1120156687",
+      "generation": "1757354310188883",
+      "crc32c": "FlwBrA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/caf01a82962cbd4651563d2ac1063e0b",
+      "size": "27445152",
+      "generation": "1757354310098105",
+      "crc32c": "Yosa6g==",
+      "md5Hash": "eKeUW1e7wkNVuJ7OtsXgXQ=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/deefd3c43390a50472cbcd317b0fff58",
+      "size": "2393670849",
+      "generation": "1757354310196805",
+      "crc32c": "JyiHIA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/ec484cf8f02dcf59e1892180f0862e40",
+      "size": "1234292390",
+      "generation": "1757354310192419",
+      "crc32c": "TP2sFA=="
+    },
+    {
+      "name": "checkpoints/pi05_base/params/ocdbt.process_0/manifest.ocdbt",
+      "size": "458",
+      "generation": "1757354310097331",
+      "crc32c": "SGdLxw==",
+      "md5Hash": "76clmla5BpNyk9xZmuw44g=="
+    }
+  ]
+}

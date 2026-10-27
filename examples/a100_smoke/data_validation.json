@@ -1,0 +1,12 @@
+{
+  "train_episodes": 8,
+  "train_frames": 3196,
+  "validation_episodes": 2,
+  "validation_frames": 937,
+  "normalization_split": "train only",
+  "disjoint_collection_sessions": true,
+  "horizon": 30,
+  "terminal_padding_policy": "exclude incomplete action windows",
+  "full_training_windows": 2964,
+  "full_validation_windows": 879
+}

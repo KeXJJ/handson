@@ -1,0 +1,114 @@
+{
+  "passed": false,
+  "checkpoint_reloaded": true,
+  "checkpoint": "workdir/checkpoints/t09_insert_peg_pi05_lora/smoke_5/4",
+  "completed_training_steps": 5,
+  "batch_size": 1,
+  "real_pretrained_pi05": true,
+  "method": "official HandsOn/OpenPI LoRA",
+  "state_dim": 52,
+  "action_dim": 52,
+  "action_horizon": 30,
+  "max_abs_trainable_tensor_changes": {
+    "PaliGemma/llm/layers/attn/attn_vec_einsum/lora_a": 0.00022465619258582592,
+    "PaliGemma/llm/layers/attn/attn_vec_einsum/lora_b": 0.00022453349083662033,
+    "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_a": 0.00022467831149697304,
+    "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_b": 0.00022443803027272224,
+    "PaliGemma/llm/layers/attn/kv_einsum/lora_a": 0.00022497447207570076,
+    "PaliGemma/llm/layers/attn/kv_einsum/lora_b": 0.00022449064999818802,
+    "PaliGemma/llm/layers/attn/kv_einsum_1/lora_a": 0.00022320356220006943,
+    "PaliGemma/llm/layers/attn/kv_einsum_1/lora_b": 0.00022421358153223991,
+    "action_out_proj/kernel": 0.00022289156913757324
+  },
+  "finite_updated_tensors": true,
+  "training_metrics": [
+    {
+      "step": 0,
+      "grad_norm": 1.6901,
+      "loss": 0.7543,
+      "param_norm": 1803.8848
+    },
+    {
+      "step": 1,
+      "grad_norm": 6.0742,
+      "loss": 0.6082,
+      "param_norm": 1803.8851
+    },
+    {
+      "step": 2,
+      "grad_norm": 1.1639,
+      "loss": 0.6195,
+      "param_norm": 1803.8856
+    },
+    {
+      "step": 3,
+      "grad_norm": 0.8423,
+      "loss": 0.5287,
+      "param_norm": 1803.886
+    },
+    {
+      "step": 4,
+      "grad_norm": 1.6037,
+      "loss": 0.6316,
+      "param_norm": 1803.8864
+    }
+  ],
+  "finite_loss_and_nonzero_gradients": true,
+  "dataset": {
+    "task": "t09_insert_peg",
+    "source_task": "b03_peg_in_socket",
+    "repo_id": "Cyan666/HandsOn-Datasets",
+    "revision": "7ad38776d91e4e13c02dad4e6ad892e8b8a1d187",
+    "purpose": "Fine-tuning smoke check only; deliberately partial dataset",
+    "complete_for_selected_episodes": true,
+    "sha256_verified_files": 40,
+    "episodes": 10,
+    "split_episodes": {
+      "train": 8,
+      "validation": 2
+    },
+    "split_frames": {
+      "train": 3196,
+      "validation": 937
+    },
+    "episode_indices": {
+      "train": [
+        2500,
+        2501,
+        2502,
+        2503,
+        2504,
+        2505,
+        2507,
+        2508
+      ],
+      "validation": [
+        2506,
+        2514
+      ]
+    }
+  },
+  "data_validation": {
+    "train_episodes": 8,
+    "train_frames": 3196,
+    "validation_episodes": 2,
+    "validation_frames": 937,
+    "normalization_split": "train only",
+    "disjoint_collection_sessions": true,
+    "horizon": 30,
+    "terminal_padding_policy": "exclude incomplete action windows",
+    "full_training_windows": 2964,
+    "full_validation_windows": 879
+  },
+  "scope": "Fine-tuning execution smoke check only; no convergence or task success claim",
+  "core_finetuning_checks_passed": true,
+  "training_process_exit_code": 139,
+  "clean_training_process_exit": false,
+  "status": "core_checks_passed_but_training_runtime_shutdown_failed",
+  "runtime_issue": "JAX 0.5.3 process segfault during post-training cleanup after Orbax checkpoint finalized; independent CPU checkpoint reload succeeded.",
+  "runtime_mitigations": [
+    "XLA GPU autotune disabled",
+    "single-process data loading",
+    "GPU memory preallocation disabled"
+  ]
+}

@@ -1,0 +1,16 @@
+.venv/
+workdir/
+__pycache__/
+*.py[cod]
+*.part
+*.tmp
+.env
+.env.*
+*.safetensors
+*.pt
+*.pth
+*.npz
+*.mp4
+*.parquet
+core
+core.*

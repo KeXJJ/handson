@@ -1,0 +1,13 @@
+# Required by the unchanged upstream config module at import time.
+# The task wrapper resolves actual data/weight/output paths via paths.py.
+pretrained_model_path: workdir/models/pi05_base/params
+pretrained_model_action_dim_44_path: workdir/models/pi05_base_eef52/params
+pretrained_model_action_dim_52_path: workdir/models/pi05_base_eef52/params
+dataset_root: workdir/dataset
+rand_full_dataset_root: workdir/dataset
+ckpts_root: workdir/checkpoints
+rand_full_ckpts_root: workdir/checkpoints
+wandb_enabled: false
+batch_size: 1
+single_arm_steps: 30000
+dual_arm_steps: 60000

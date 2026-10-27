@@ -1,0 +1,34 @@
+{
+  "task": "t09_insert_peg",
+  "source_task": "b03_peg_in_socket",
+  "repo_id": "Cyan666/HandsOn-Datasets",
+  "revision": "7ad38776d91e4e13c02dad4e6ad892e8b8a1d187",
+  "purpose": "Fine-tuning smoke check only; deliberately partial dataset",
+  "complete_for_selected_episodes": true,
+  "sha256_verified_files": 40,
+  "episodes": 10,
+  "split_episodes": {
+    "train": 8,
+    "validation": 2
+  },
+  "split_frames": {
+    "train": 3196,
+    "validation": 937
+  },
+  "episode_indices": {
+    "train": [
+      2500,
+      2501,
+      2502,
+      2503,
+      2504,
+      2505,
+      2507,
+      2508
+    ],
+    "validation": [
+      2506,
+      2514
+    ]
+  }
+}
