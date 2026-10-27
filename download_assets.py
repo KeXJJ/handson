@@ -83,6 +83,8 @@ def download_dataset(args):
         paths.extend([row['data_path'],*row['video_paths'].values()])
     entries=[manifest[name] for name in paths]
     summary={'repo_id':DATASET,'revision':REVISION,'task':'t09_insert_peg','source_task':SOURCE_TASK,
+             'local_directory':str(DATASET_DIR),'metadata_cache_directory':str(metadata),
+             'upstream_url':f'{endpoint}/datasets/{DATASET}/tree/{REVISION}',
              'episodes':len(selected),'split_episodes':dict(Counter(row['split'] for row in selected)),
              'split_frames':{s:sum(row['frames'] for row in selected if row['split']==s) for s in ('train','validation')},
              'files':len(entries),'bytes':sum(row['bytes'] for row in entries),
